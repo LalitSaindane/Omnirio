@@ -1,0 +1,24 @@
+{
+    "data": [{
+    "employeeId":1,
+    "employeeName":"Aaa",
+    "designation":"Developer",
+    "age":30,
+    "bloodGroup":"A+"
+},
+{
+    "employeeId":2,
+    "employeeName":"abc",
+    "designation":"Xester",
+    "age":31,
+    "bloodGroup":"B+"
+},
+{
+    "employeeId":3,
+    "employeeName":"Xyz",
+    "designation":"Aester",
+    "age":40,
+    "bloodGroup":"O-"
+}
+]
+}

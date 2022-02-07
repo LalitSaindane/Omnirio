@@ -1,0 +1,29 @@
+<div>
+<button (click)="gotoEmployee()" class="addEmployee">Add Employee</button>
+</div>
+<div>
+    <label>Search Employee</label><br>
+    <input type="text" placeholder="Seach employee name" #myInput>
+</div>
+<div *ngIf="!spinner &&  this.dataProvider.information.length > 0">
+    <table border="1" class="table">
+        <th (click)="onSortClick('numberType','employeeId')" class="sort">EmployeeId</th>
+        <th (click)="onSortClick('stringType','employeeName')" class="sort">EmployeeName</th>
+        <th (click)="onSortClick('stringType','designation')" class="sort">Designation</th>
+        <th (click)="onSortClick('numberType','age')" class="sort">Age</th>
+        <th>BloodGroup</th>
+        <tr *ngFor="let info of this.dataProvider.information">
+          <td>{{info.employeeId}}</td>
+          <td>{{info.employeeName}}</td>
+          <td>{{info.designation}}</td>
+          <td>{{info.age}}</td>
+          <td>{{info.bloodGroup}}</td>
+        </tr>
+      </table>
+</div>
+
+<div *ngIf="this.dataProvider.information.length == 0">
+ <div>Data not found</div>
+</div>
+
+<div class="loader" *ngIf="spinner"></div>

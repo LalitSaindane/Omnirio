@@ -1,0 +1,58 @@
+<h3>Employee Addition</h3>
+<div class="form">
+<form [formGroup]="employeeForm" (ngSubmit)="submitEmployeeForm()">
+  <div>
+      <label>Employee Id</label><br>
+      <input type="number" formControlName="employeeId">
+      <div *ngIf="f.employeeId?.errors && f.employeeId?.touched ">
+          <div *ngIf="f.employeeId.errors.required" class="errorMessage">
+              EmployeeId is required
+          </div>
+      </div>
+  </div>
+
+  <div>
+  <label>Employee Name</label><br>
+  <input type="text" formControlName="employeeName">
+  <div *ngIf="f.employeeName?.errors && f.employeeName?.touched ">
+      <div *ngIf="f.employeeName.errors.required" class="errorMessage">
+          EmployeeName is required
+      </div>
+  </div>
+  </div>
+
+  <div>
+  <label>Designation</label><br>
+  <input type="text" formControlName="designation">
+  <div *ngIf="f.designation?.errors && f.designation?.touched ">
+      <div *ngIf="f.designation.errors.required" class="errorMessage">
+          Designation is required
+      </div>
+  </div>
+  </div>
+ 
+  <div>
+  <label>Age</label><br>
+  <input type="number" formControlName="age">
+  <div *ngIf="f.age?.errors && f.age?.touched ">
+      <div *ngIf="f.age.errors.required" class="errorMessage">
+          Age is required
+      </div>
+  </div>
+  </div>
+
+  <div>
+  <label>BloodGroup</label><br>
+  <input type="text" formControlName="bloodGroup">
+  <div *ngIf="f.bloodGroup?.errors && f.bloodGroup?.touched ">
+      <div *ngIf="f.bloodGroup.errors.required" class="errorMessage">
+          BloodGroup is required
+      </div>
+  </div>
+  </div>
+  
+  <div>
+      <button type="submit" [disabled]="!employeeForm.valid">Submit</button>
+  </div>
+</form> 
+</div>
